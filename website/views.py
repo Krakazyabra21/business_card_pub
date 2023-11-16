@@ -1,7 +1,7 @@
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
-from main import db
+# from main import db
 
-views = Blueprint(__name__, "views/")
+views = Blueprint('views', __name__)
 
 @views.route("/", methods= ['GET', 'POST'])
 def home():
@@ -11,15 +11,15 @@ def home():
         phone = data.get('phone')
         email = data.get('email')
 
-        from bd_commands import HRs
-        new_HR = HRs(name= name, phone= phone, email=email)
-        db.session.add(new_HR)
-        db.session.commit()
+        # from bd_commands import HRs
+        # new_HR = HRs(name= name, phone= phone, email=email)
+        # db.session.add(new_HR)
+        # db.session.commit()
 
         # return redirect(url_for('/'))
         return render_template("index.html")
 
-    return render_template("index.html",name= "xdd")
+    return render_template("index.html")
 
 
 @views.route("/profile")
