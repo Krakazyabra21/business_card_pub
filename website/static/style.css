@@ -1,3 +1,10 @@
+:root {
+  --gray--bg: #d9d9d9;
+  --error-border: red;
+  --error-color: var(--error-border);
+  --orange-bg: #ffaa73;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +12,7 @@
 .body {
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main {
@@ -15,21 +22,21 @@
   height: 100vh;
 }
 
-.form-group {
+.content-item {
+  min-width: 320px;
+  flex-grow: 1;
+}
+
+.skills {
   display: flex;
   flex-direction: column;
   align-items: start;
   gap: 10px;
-  width: 100%;
-  background-color: #D9D9D9;
+  background-color: var(--gray--bg);
   padding: 25px;
   font-size: 20px;
   font-weight: 700;
-
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
 }
 
 .form-group__item {
@@ -60,7 +67,10 @@
   gap: 20px;
   justify-content: space-between;
   padding: 10px;
-  background: #FFAA73;
+  background: var(--orange-bg);
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 }
 
 .welcome__logo {
@@ -70,9 +80,9 @@
   min-height: 250px;
 }
 
-.welcome__logo img{
- width: 100%;
- height: 100%;
+.welcome__logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .welcome__content {
@@ -81,16 +91,40 @@
 
 /* content */
 
+.form {
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 25px;
+  background: var(--gray--bg);
+}
+
 .content {
   display: flex;
   gap: 20px;
   height: 100%;
   font-weight: 900;
+  @media screen and (max-width: 1024px) {
+    flex-wrap: wrap;
+  }
 }
 
 .about {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
-  background-color: #FFAA73;
-  padding: 10px;
+  background-color: var(--orange-bg);
+  padding: 25px;
+}
+
+.about__item {
+  display: list-item;
+  flex-direction: column;
+}
+.about__value {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+.not-validated {
+  border-color: var(--error-border);
+  color: var(--error-color);
 }

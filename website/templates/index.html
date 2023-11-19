@@ -1,102 +1,121 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../static/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../static/style.css" />
     <title>Document</title>
-</head>
-<body class="body">
+  </head>
+  <body class="body">
     <div class="main">
-        <div class="welcome">
-            <div class="welcome__logo">
-                <img src="../static/media/photo.png" alt="Паша">
-            </div>
-    
-            <div class="welcome__content">
-                <h1>I'm a beginner back-end programmer. My name Pavel. I have some experience in this area of programming. I love communicating with people and creating joint projects</h1>
-            </div>
+      <div class="welcome">
+        <div class="welcome__logo">
+          <img src="../static/media/photo.png" alt="Паша" />
         </div>
-        <div class="content">
-            <div class="about">
-                <h2>Contact to me:</h2>
-                <ul>
-                    <li>gmail: kraka21thbusiness@gmail.com</li>
-                    <li>mail: krakazyabra2102@mail.ru</li>
-                    <li>discord: .kraka.</li>
-                    <li>github: https://github.com/Krakazyabra21</li>
-                </ul>
-
-                <form method="POST">
-                    <div class="form-group__item">
-                        <label for="name">Your name</label>
-                        <input
-                                class="form-group__input"
-                                type="text"
-                                class="form-control"
-                                id="name"
-                                name="name"
-                                placeholder="Enter name"
-                                align="center"
-                        />
-                    </div>
-                    <div  class="form-group__item">
-                        <label for="phone">Your phone</label>
-                        <input
-                                class="form-group__input"
-                                type="text"
-                                class="form-control"
-                                id="phone"
-                                name="phone"
-                                placeholder="Enter phone"
-                        />
-                    </div>
-                    <div class="form-group__item">
-                        <label for="email">Your email</label>
-                        <input
-                                class="form-group__input"
-                                type="email"
-                                class="form-control"
-                                id="email"
-                                name="email"
-                                placeholder="Enter email"
-                        />
-                    </div>
-
-                    <button class="form-group__button" type="submit">Отправить</button>
-                </form>
-            </div>
-
-
-
-            <div class="form-group" align="Left">
-                <h2>SKILLS & COMPETENCIES:</h2>
-                    <li>Database Performance Optimization & Monitoring</li>
-                    <li>Database Design & Administration</li>
-                    <li>Server Setups & System Diagnostics</li>
-                    <li>Web Development Basics (HTML & CSS)</li>
-                    <li>Quality Assurance & Testing</li>
-                <p></p>
-            </div>
-
-            <div class="form-group" align="left">
-                <h2 align="center" >HARD SKILLS</h2>
-                <div
-                    >At the moment I am studying at the college of Vyatggu, in the future I see myself as a backend
-                    developer, I want to constantly move forward and learn new things. <p></p>
-                    I have experience working with the following programming languages: Python, C++/#, HTML, CSS, DART.
-                    I also used Flash and Django APIs in my products
-                </div>
-            </div>
-
+        <div class="welcome__content">
+          <h1>
+            I'm a beginner back-end programmer. My name is Pavel. I`ve some
+            experience at this area of programming. I love communicating with
+            people and creating joint projects
+          </h1>
         </div>
+      </div>
+      <div class="content">
+        <div class="content-item about">
+          <h2>Contact to me:</h2>
+          <ul>
+            <li class="about__item">
+              <div>gmail:</div>
+              <div class="about__value">kraka21thbusiness@gmail.com</div>
+            </li>
+            <li class="about__item">
+              <div>mail:</div>
+              <div class="about__value">krakazyabra2102@mail.ru</div>
+            </li>
+            <li class="about__item">
+              <div>discord:</div>
+              <div class="about__value">.kraka.</div>
+            </li>
+            <li class="about__item">
+              <div>github:</div>
+              <div class="about__value">https://github.com/Krakazyabra21</div>
+            </li>
+          </ul>
+
+          <form class="form" method="POST">
+            <div class="form-group__item">
+              <label for="name">Your name</label>
+              <input
+                class="form-group__input"
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter name"
+                align="center"
+                minlength="3"
+                maxlength="16"
+                required
+              />
+            </div>
+            <div class="form-group__item">
+              <label for="phone">Your phone</label>
+              <input
+                class="form-group__input"
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter phone"
+                pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
+                required
+              />
+            </div>
+            <div class="form-group__item">
+              <label for="email">Your email</label>
+              <input
+                class="form-group__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email"
+                required
+              />
+            </div>
+
+            <button class="form-group__button" type="submit">Отправить</button>
+          </form>
+        </div>
+
+        <div class="content-item skills" align="Left">
+          <h2>SKILLS & COMPETENCIES:</h2>
+          <ul>
+            <li>Database Performance Optimization & Monitoring</li>
+            <li>Database Design & Administration</li>
+            <li>Server Setups & System Diagnostics</li>
+            <li>Web Development Basics (HTML & CSS)</li>
+            <li>Quality Assurance & Testing</li>
+          </ul>
+        </div>
+
+        <div class="content-item skills hard-skills">
+          <h2>HARD SKILLS</h2>
+          <div>
+            At the moment I am studying at the college of Vyatggu, in the future
+            I see myself as a backend developer, I want to constantly move
+            forward and learn new things.
+            <br />
+            <br />
+            I have experience working with the following programming languages:
+            Python, C++/#, HTML, CSS, DART. I also used Flash and Django APIs in
+            my products
+          </div>
+        </div>
+      </div>
     </div>
-        
-        
-        
-    
+
     <script type="text/javascript" src="../static/index.js"></script>
-</body>
+  </body>
 </html>
